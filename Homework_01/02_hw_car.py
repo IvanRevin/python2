@@ -16,7 +16,7 @@ class Car:
         self.gas += liters
 
     def ride(self, distance):
-        required_fuel = distance // self.gas_per_km
+        required_fuel = self.gas_per_km * distance // 100
         real_dist = self.gas // self.gas_per_km * 100
         err_dist=''
         if real_dist < distance:
